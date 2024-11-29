@@ -5,36 +5,38 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
 
     System.out.println("Enter any three numbers: (Press the Enter key after each number)");
-    double num1 = scanner.nextDouble();
-    double num2 = scanner.nextDouble();
-    double num3 = scanner.nextDouble();
+    double num1 = scanner.nextDouble();// 1st number entered by the user
+    double num2 = scanner.nextDouble();// 2nd number entered by the user
+    double num3 = scanner.nextDouble();// 3rd number entered by the user
 
-    displaySortedNumbers(num1, num2, num3);
+    displaySortedNumbers(num1, num2, num3); // display the number in increasing order
 
-    scanner.close();
+    scanner.close(); // close the scanner
   }
 
   public static void displaySortedNumbers(double num1, double num2, double num3) {
-    double temp;
+   ////method to display the numbers in increasing order
+    double temp;// temporary variable to store the value of the numbers
 
-    if (num1 > num2) {
-      temp = num1;
-      num1 = num2;
-      num2 = temp;
+    if (num1 > num2) {// check if the list number is greater than the 2nd number
+      temp = num1;// store the value of the 1st number in the temporary variable
+      num1 = num2;// 2nd number in 1st variable
+      num2 = temp;//1st number in 2nd variable
     }
 
-    if (num2 > num3) {
+    if (num2 > num3) {//check if the 2nd number is greater than the 3rd number
       temp = num2;
       num2 = num3;
       num3 = temp;
     }
 
-    if (num1 > num2) {
+    if (num1 > num2) {//check if the 1st number is greater than the 2nd number
       temp = num1;
       num1 = num2;
       num2 = temp;
     }
 
     System.out.println("The numbers in increasing order are: " + num1 + ", " + num2 + ", " + num3);
+//diasplay the numbers in increasing order
   }
 }
